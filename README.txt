@@ -31,7 +31,7 @@ MP -- Writes a specified number to memory pointer.
 IMP -- Increments memory pointer.
 DMP -- Decrements memory pointer.
 
-More will be added in the future.
+More may be added in the future.
 
 For those who are asking if it can run DOOM:
 I have no idea. It's faster than the CPUs that ran DOOM, but I don't have the time to program DOOM for it.
