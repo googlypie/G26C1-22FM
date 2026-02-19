@@ -1,0 +1,88 @@
+> = RAM pointer
+m> = memory pointer
+
+number beside command = optimized version opcode
+
+--output
+	0--out
+		out [number] -- sets output to [number]
+		out a -- sets output to regA
+	1--dev
+		dev [number] -- sets device to [number]
+		dev a -- sets device to regA
+	2--deva
+		deva [number] -- sets device address to [number]
+		deva a -- sets device address to regA
+	3--upd
+		upd -- updates devices
+
+--control
+	4--jp
+		jp [number] -- jumps to line [number]
+		jp a -- jumps to line regA
+	5--jz
+		jz [number] -- jumps to line [number] IF regA == 0
+	6--jnz
+		jnz [number] -- jumps to line [number] IF regA ~= 0
+	7--end
+		end -- ends the program
+	8--wait
+		wait [number] -- waits [number] CPU cycles
+
+--arithmetic
+	9--add
+		add [number] -- adds regA by [number]
+		add r -- adds regA by value in RAM at >address
+		add p -- adds regA by pointer
+	10--sub
+		sub [number] -- subtracts regA by [number]
+		sub r -- subtracts regA by value in RAM at >address
+		sub p -- subtracts regA by pointer
+	11--mul
+		mul [number] -- multiplies regA by [number]
+		mul r -- multiplies regA by value in RAM at >address
+		mul p -- multiplies regA by pointer
+	12--div
+		div [number] -- divides regA by [number]
+		div r -- divides regA by value in RAM at >address
+		div p -- divides regA by pointer
+
+--memory
+	13--wa
+		wa [value] -- writes [number] to regA
+		wa r -- writes value from RAM at >address to regA
+		wa p -- writes pointer value to regA
+		wa i -- writes input value to regA
+		wa m -- writes value from memory at m>address to regA
+	14--rp
+		rp [number] -- sets RAM pointer to [number]
+		rp a -- sets RAM pointer to regA
+	15--irp
+		irp [number] -- increments RAM pointer by [number]
+		irp a -- increments RAM pointer by regA
+	16--drp
+		drp [number] -- decrements RAM pointer by [number]
+		drp a -- decrements RAM pointer by regA
+	17--wr
+		wr [value] -- writes [value] to >address in RAM
+		wr a -- writes regA to >address in RAM
+	18--wm
+		wm [number] -- writes [number] to m>address in memory
+	19--mp
+		mp [number] -- sets memory pointer to [number]
+		mp a -- sets memory pointer to regA
+	20--imp
+		imp [number] -- increments memory pointer by [number]
+		imp a -- increments memory pointer by regA
+	21--dmp
+		dmp [number] -- decrements memory pointer by [number]
+		dmp a -- decrements memory pointer by regA
+
+--unused
+	oua -- sets output to regA
+	ous [number] -- sets second output to [number]
+	osa -- sets second output to regA
+	wap [number] -- writes >address to regA
+	rpa -- sets RAM pointer to regA
+	wra -- writes regA to >address in RAM
+	rr -- reads from >address in RAM to regA
