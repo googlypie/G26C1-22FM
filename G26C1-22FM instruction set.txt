@@ -49,7 +49,7 @@ number beside command = optimized version opcode
 
 --memory
 	13--wa
-		wa [value] -- writes [number] to regA
+		wa [number] -- writes [number] to regA
 		wa r -- writes value from RAM at >address to regA
 		wa p -- writes pointer value to regA
 		wa i -- writes input value to regA
@@ -64,7 +64,7 @@ number beside command = optimized version opcode
 		drp [number] -- decrements RAM pointer by [number]
 		drp a -- decrements RAM pointer by regA
 	17--wr
-		wr [value] -- writes [value] to >address in RAM
+		wr [number] -- writes [value] to >address in RAM
 		wr a -- writes regA to >address in RAM
 	18--wm
 		wm [number] -- writes [number] to m>address in memory
@@ -85,4 +85,5 @@ number beside command = optimized version opcode
 	wap [number] -- writes >address to regA
 	rpa -- sets RAM pointer to regA
 	wra -- writes regA to >address in RAM
+
 	rr -- reads from >address in RAM to regA
