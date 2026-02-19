@@ -35,3 +35,5 @@ More may be added in the future.
 
 For those who are asking if it can run DOOM:
 I have no idea. It's faster than the CPUs that ran DOOM, but I don't have the time to program DOOM for it.
+
+Also, fun fact, I have not seen any CPU faster than this one that is written in Luau. This may be the fastest CPU ever built within Luau. Or just Roblox. Either way.
